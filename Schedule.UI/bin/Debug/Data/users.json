@@ -1,0 +1,46 @@
+﻿[
+  {
+    "Email": "ill-falcon@yandex.ru",
+    "Name": "Kostya",
+    "Surname": "Minchenkov",
+    "Password": "Yd5pP7AbdMEtc6jTO0zrUQ==",
+    "Preferences": [
+      {
+        "StationId": 3,
+        "Description": "Work"
+      },
+      {
+        "StationId": 2,
+        "Description": null
+      },
+      {
+        "StationId": 1,
+        "Description": "Home"
+      }
+    ]
+  },
+  {
+    "Email": "kostasminch@gmail.com",
+    "Name": "Elon",
+    "Surname": "Adashev",
+    "Password": "8Sz1PbQQyeyNPRg210dYQA==",
+    "Preferences": [
+      {
+        "StationId": 5,
+        "Description": null
+      },
+      {
+        "StationId": 3,
+        "Description": "Work"
+      },
+      {
+        "StationId": 2,
+        "Description": "Home"
+      },
+      {
+        "StationId": 1,
+        "Description": null
+      }
+    ]
+  }
+]

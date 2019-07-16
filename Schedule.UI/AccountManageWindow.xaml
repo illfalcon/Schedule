@@ -1,0 +1,82 @@
+﻿<Window x:Class="Schedule.UI.AccountManageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Schedule.UI"
+        mc:Ignorable="d"
+        Title="AccountManageWindow" Height="500" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.ColumnSpan="3" VerticalAlignment="Center" FontSize="16" HorizontalAlignment="Center">Edit your information</TextBlock>
+        <Grid Grid.Row="1" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBox Width="200" FontSize="20" VerticalAlignment="Center" Margin="5"
+                     Name="textBoxName" LostFocus="textBoxName_LostFocus"></TextBox>
+            <TextBox Width="200" Foreground="#d8d8d8" FontSize="20" VerticalAlignment="Center"
+                     Margin="5" Visibility="Collapsed"
+                     Name="fakeTextBoxName" GotFocus="fakeTextBoxName_GotFocus">Name</TextBox>
+            <TextBlock Name="emptyNameMessage" Visibility="Collapsed" Grid.Row="1" 
+                       HorizontalAlignment="Center" Width="200" Foreground="Red">Name field must be not empty</TextBlock>
+        </Grid>
+        <Grid Grid.Row="2" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBox Width="200" FontSize="20" VerticalAlignment="Center" Margin="5"
+                     Name="textBoxSurname" LostFocus="textBoxSurname_LostFocus"></TextBox>
+            <TextBox Width="200" Foreground="#d8d8d8" FontSize="20" 
+                     VerticalAlignment="Center" Margin="5" Visibility="Collapsed"
+                     Name="fakeTextBoxSurname" GotFocus="fakeTextBoxSurname_GotFocus">Surname</TextBox>
+            <TextBlock Name="emptySurnameMessage" Visibility="Collapsed" Grid.Row="1" 
+                       HorizontalAlignment="Center" Width="200" Foreground="Red">Surname field must be not empty</TextBlock>
+        </Grid>
+        <Grid Grid.Row="3" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBox Width="200" FontSize="20" VerticalAlignment="Center" Margin="5"
+                     Name="textBoxEmail" LostFocus="textBoxEmail_LostFocus"/>
+            <TextBox Width="200" Foreground="#d8d8d8" FontSize="20" 
+                     VerticalAlignment="Center" Margin="5" Visibility="Collapsed"
+                     Name="fakeTextBoxEmail" GotFocus="fakeTextBoxEmail_GotFocus">Email</TextBox>
+            <TextBlock Name="emptyEmailMessage" Visibility="Collapsed" Grid.Row="1" 
+                       HorizontalAlignment="Center" Width="200" Foreground="Red">Email must be not empty
+            </TextBlock>
+            <TextBlock Name="existingEmailMessage" Visibility="Collapsed" Grid.Row="1" 
+                       HorizontalAlignment="Center" Width="200" Foreground="Red">A user with this email already exists
+            </TextBlock>
+        </Grid>
+        <Button Grid.Row="4" Grid.ColumnSpan="3" VerticalAlignment="Top" 
+                Margin="10 0 10 20" Width="200" FontSize="20"
+                Click="Button_PasswordChange_Click">Change Password</Button>
+        <Button Grid.Row="4" Grid.ColumnSpan="3" VerticalAlignment="Bottom"
+                Margin="0 0 0 10" Width="200" FontSize="20" Click="Button_Submit_Click">Submit</Button>
+        <Button Grid.Row="5" VerticalAlignment="Bottom" HorizontalAlignment="Center"
+                Margin="5" Height="40" Width="75" Click="Button_Back_Click">Back</Button>
+        <Button Grid.Row="5" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center"
+                Margin="5" Height="40" Width="75" Click="Button_LogOut_Click">Log Out</Button>
+        <Button Grid.Row="5" Grid.Column="2" VerticalAlignment="Bottom"
+                Click="Button_DeleteAccount_Click"
+                Margin="5" Height="40" Width="75" HorizontalAlignment="Center">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Delete Account</TextBlock>
+        </Button>
+    </Grid>
+</Window>

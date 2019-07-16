@@ -1,0 +1,44 @@
+﻿<Window x:Class="Schedule.UI.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Schedule.UI"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="500" Width="300">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="15" Margin="0 150 0 0" HorizontalAlignment="Center">Enter your data to sign in</TextBlock>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBox Name="textBoxEmail" LostFocus="textBoxEmail_LostFocus" Width="200" FontSize="20" VerticalAlignment="Center" Margin="5"></TextBox>
+            <TextBox Name="fakeTextBoxEmail" Foreground="#d8d8d8" GotFocus="fakeTextBoxEmail_GotFocus" Width="200" FontSize="20" VerticalAlignment="Center" Margin="5">Email</TextBox>
+            <TextBlock Name="wrongEmailMessage" Visibility="Collapsed" Grid.Row="1" HorizontalAlignment="Center" Width="200" Foreground="Red">There is no user with such email</TextBlock>
+            <TextBlock Name="emptyEmailMessage" Visibility="Collapsed" Grid.Row="1" HorizontalAlignment="Center" Width="200" Foreground="Red">Email must be not empty</TextBlock>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <PasswordBox Name="passwordBoxPassword" FontSize="20" VerticalAlignment="Center" Width="200" Margin="5" LostFocus="passwordBoxPassword_LostFocus"></PasswordBox>
+            <TextBox Name="textBoxPassword" Foreground="#d8d8d8" GotFocus="textBoxPassword_GotFocus" Width="200" FontSize="20" VerticalAlignment="Center" Margin="5" >Password</TextBox>
+            <TextBlock Name="wrongPasswordMessage" Visibility="Collapsed" Grid.Row="1" HorizontalAlignment="Center" Width="200" Foreground="Red">Invalid password</TextBlock>
+            <TextBlock Name="emptyPasswordMessage" Visibility="Collapsed" Grid.Row="1" HorizontalAlignment="Center" Width="200" Foreground="Red">Password field must be not empty</TextBlock>
+        </Grid>
+        <Button Height="30" Grid.Row="3" Margin="5" Width="200" Click="Button_SignIn_Click" FontSize="18">Sign In</Button>
+        <StackPanel VerticalAlignment="Bottom" Grid.Row="4">
+            <TextBlock Width="200" HorizontalAlignment="Center" FontSize="15">Do not have an account yet?</TextBlock>
+            <Button Height="30" Grid.Row="4" Margin="5" Width="200" Click="Button_Register_Click" FontSize="18">Register</Button>
+        </StackPanel>
+    </Grid>
+</Window>

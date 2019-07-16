@@ -1,0 +1,42 @@
+[
+  {
+    "Name": "District Line",
+    "StartTime": 360,
+    "EndTime": 120,
+    "Interval": 7,
+    "StationIds": [
+      6,
+      1,
+      2,
+      3,
+      11
+    ],
+    "Intervals": [
+      2,
+      3,
+      2,
+      10
+    ]
+  },
+  {
+    "Name": "Piccadilly Line",
+    "StartTime": 300,
+    "EndTime": 60,
+    "Interval": 5,
+    "StationIds": [
+      12,
+      5,
+      6,
+      2,
+      3,
+      13
+    ],
+    "Intervals": [
+      20,
+      2,
+      3,
+      2,
+      10
+    ]
+  }
+]
